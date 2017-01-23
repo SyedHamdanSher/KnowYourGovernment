@@ -5,31 +5,103 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.shertech.converter.MainActivity">
+    tools:context="com.shertech.converter.MainActivity"
+    android:background="@drawable/wbg">
 
 
     <RadioButton
         android:text="@string/f2c"
-        android:layout_width="wrap_content"
+        android:layout_width="171dp"
         android:layout_height="wrap_content"
         android:id="@+id/rbF2C"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/background_light"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:textColor="@color/colorAccent"
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="16dp" />
 
     <RadioButton
         android:text="@string/c2f"
-        android:layout_width="wrap_content"
+        android:layout_width="173dp"
         android:layout_height="wrap_content"
         android:id="@+id/rbC2F"
+        android:background="@android:color/background_light"
+        android:textColor="@color/colorAccent"
         app:layout_constraintBaseline_toBaselineOf="@+id/rbF2C"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintLeft_toRightOf="@+id/rbF2C"
-        android:layout_marginLeft="24dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="16dp"
-        app:layout_constraintHorizontal_bias="0.06" />
+        android:layout_marginRight="16dp" />
+
+    <TextView
+        android:text="@string/tvChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginStart="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="18sp"
+        android:textColor="@color/colorAccent"
+        android:background="@android:color/background_light"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="50dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etLT"
+        app:layout_constraintLeft_toLeftOf="@+id/rbF2C"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/rbF2C"
+        android:background="@android:color/background_light"
+        android:textColor="?android:attr/colorEdgeEffect" />
+
+    <TextView
+        android:text="="
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etLT"
+        android:layout_marginStart="24dp"
+        app:layout_constraintLeft_toRightOf="@+id/etLT"
+        android:layout_marginLeft="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvResult"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etLT"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView2"
+        android:layout_marginLeft="16dp"
+        android:background="@android:color/background_light"
+        android:text="66.7"
+        app:layout_constraintRight_toRightOf="@+id/rbC2F"
+        app:layout_constraintHorizontal_bias="0.15" />
+
+    <Button
+        android:text="@string/btConvert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btConvert"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/etLT"
+        app:layout_constraintLeft_toLeftOf="@+id/etLT"
+        app:layout_constraintRight_toRightOf="@+id/rbC2F"
+        android:background="@color/colorAccent"
+        app:layout_constraintHorizontal_bias="0.0" />
+
 </android.support.constraint.ConstraintLayout>
