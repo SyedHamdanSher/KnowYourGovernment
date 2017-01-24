@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         double flag;
 
         flag=tempCal(rbID);
+        flag=Math.round(100 * flag) / 100d;
         tvResult.setText(String.valueOf(flag));
     }
 }

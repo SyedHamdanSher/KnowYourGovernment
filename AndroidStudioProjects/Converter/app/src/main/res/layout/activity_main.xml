@@ -30,7 +30,7 @@
     <EditText
         android:layout_width="179dp"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="number|numberDecimal"
         android:ems="10"
         android:id="@+id/etLT"
         android:background="@android:color/background_light"
@@ -61,7 +61,6 @@
         android:id="@+id/tvResult"
         android:textColor="@color/colorPrimary"
         android:background="@android:color/background_light"
-        android:text="66.7"
         android:textSize="24sp"
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toRightOf="@+id/textView2"
