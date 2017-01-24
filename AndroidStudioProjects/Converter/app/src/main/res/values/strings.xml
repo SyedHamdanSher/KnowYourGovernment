@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Converter</string>
-    <string name="f2c">Fahrenheit to Celsius</string>
-    <string name="c2f">Celsius to Fahrenheit</string>
+    <string name="f2c">Fahrenheit to Celsius </string>
+    <string name="c2f">Celsius to Fahrenheit </string>
     <string name="tvChoice"><b>Select type of Conversion :</b></string>
     <string name="btConvert">Convert</string>
 </resources>
