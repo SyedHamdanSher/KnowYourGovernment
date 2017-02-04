@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="18sp"
         android:textColor="@color/colorAccent"
         android:background="@android:color/background_light"
@@ -28,20 +28,20 @@
         android:layout_marginRight="16dp" />
 
     <EditText
-        android:layout_width="180dp"
+        android:layout_width="172dp"
         android:layout_height="wrap_content"
-        android:inputType="number|numberDecimal"
+        android:inputType="number|numberSigned|numberDecimal"
         android:ems="10"
         android:id="@+id/etLT"
         android:background="@android:color/background_light"
-        android:textColor="?android:attr/colorEdgeEffect"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
         app:layout_constraintLeft_toLeftOf="@+id/radioGroup" />
 
     <TextView
-        android:text="="
+        android:text="@string/eqsign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
@@ -49,21 +49,26 @@
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/etLT"
-        android:layout_marginStart="16dp"
         app:layout_constraintLeft_toRightOf="@+id/etLT"
-        android:layout_marginLeft="16dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="29dp"
         android:id="@+id/tvResult"
         android:textColor="@color/colorPrimary"
         android:background="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/etLT"
-        android:layout_marginStart="16dp"
         app:layout_constraintLeft_toRightOf="@+id/textView2"
-        android:layout_marginLeft="16dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:scrollbars="horizontal" />
 
     <Button
         android:text="@string/btConvert"
@@ -79,10 +84,11 @@
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="16dp" />
+        android:layout_marginLeft="16dp"
+        app:layout_constraintHorizontal_bias="0.56" />
 
     <RadioGroup
-        android:layout_width="352dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -102,7 +108,9 @@
             android:id="@+id/rbC2F"
             android:background="@android:color/background_light"
             android:textColor="@color/colorAccent"
-            android:layout_weight="0.57" />
+            android:layout_weight="0.57"
+            android:checked="true"
+            android:buttonTint="@color/colorPrimaryDark" />
 
         <RadioButton
             android:text="@string/f2c"
@@ -111,18 +119,35 @@
             android:id="@+id/rbF2C"
             android:layout_weight="1"
             android:background="@android:color/background_light"
-            android:textColor="@color/colorAccent" />
+            android:textColor="@color/colorAccent"
+            android:buttonTint="@color/colorPrimaryDark" />
     </RadioGroup>
 
     <TextView
-        android:layout_width="258dp"
-        android:layout_height="89dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:id="@+id/aTV"
         app:layout_constraintLeft_toLeftOf="@+id/btConvert"
         app:layout_constraintRight_toRightOf="@+id/btConvert"
         android:background="@android:color/background_light"
+        android:scrollbars="vertical"
         android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/btConvert"
-        tools:text="DSFSDF" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/btCH"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:text="@string/ch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btCH"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="@+id/aTV"
+        app:layout_constraintRight_toRightOf="@+id/aTV"
+        android:onClick="onClear" />
 
 </android.support.constraint.ConstraintLayout>
